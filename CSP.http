@@ -1,0 +1,6 @@
+@CSP_HostAddress = http://localhost:5262
+
+GET {{CSP_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

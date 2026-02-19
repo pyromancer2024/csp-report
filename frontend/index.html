@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>CSP Report-Only Local Test</title>
+</head>
+<body>
+  <h1>CSP Report-Only Test</h1>
+
+  <p>Open DevTools → Network → you should see POST to <code>http://api.local/csp/report</code></p>
+
+  <!-- This will violate script-src 'self' (inline script blocked) -->
+  <script>
+    console.log("This inline script should trigger a CSP report (Report-Only).");
+  </script>
+
+  <!-- Another violation (external image not allowed if img-src self data:) -->
+  <img src="https://example.com/does-not-matter.png" />
+</body>
+</html>
