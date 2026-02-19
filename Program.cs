@@ -57,4 +57,4 @@ app.MapMethods("/csp-report", new[] { "POST", "OPTIONS" }, async (HttpContext ct
 app.MapGet("/health", () => Results.Ok("ok"));
 
 // Note: HTTPS binding requires a trusted cert (and ideally matching the host/IP)
-app.Run("https://0.0.0.0:5100");
+app.Run();
